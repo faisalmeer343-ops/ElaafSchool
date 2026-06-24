@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABC DEMO SCHOOL – Premium Fee Management</title>
+  <title>XYZ DEMO SCHOOL – Premium Fee Management</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1840,7 +1840,7 @@
         if (previousFee>0) fees += `<div class="voucher-arrears"><span>🔴 Previous Arrears</span><span>${formatCurrency(previousFee)}</span></div>`;
         fees += `<div class="voucher-row total"><span>💰 TOTAL FEE</span><span>${formatCurrency(total)}</span></div>`;
         fees += `<div class="voucher-row" style="color:#27ae60;"><span>✅ Amount Paid</span><span>${formatCurrency(paid)}</span></div>`;
-        html += `<div class="voucher-preview"><div class="voucher-header"><h2>🏫 ABC DEMO SCHOOL</h2><div class="sub">FEE VOUCHER</div></div>
+        html += `<div class="voucher-preview"><div class="voucher-header"><h2>🏫 XYZ DEMO SCHOOL</h2><div class="sub">FEE VOUCHER</div></div>
           <div class="voucher-detail"><div><span class="label">ID:</span> <span class="value">${s.id}</span></div>
           <div><span class="label">Name:</span> <span class="value">${s.name}</span></div>
           <div><span class="label">Father:</span> <span class="value">${s.father}</span></div>
@@ -1848,7 +1848,7 @@
           <div><span class="label">Phone:</span> <span class="value">${s.phone||'N/A'}</span></div>
           <div><span class="label">Month:</span> <span class="value">${month} ${year}</span></div></div>
           <div class="voucher-fee">${fees}<div class="voucher-total"><span>📊 DUE BALANCE</span><span>${formatCurrency(balance)}</span></div></div>
-          <div style="background:yellow;padding:10px;border-radius:8px;margin-top:12px;font-size:12px;text-align:center;">💳 Easypesa: 0000 | 🏦ABC</div>
+          <div style="background:yellow;padding:10px;border-radius:8px;margin-top:12px;font-size:12px;text-align:center;">💳 Easypesa: 0000 | 🏦XYZ</div>
           <div class="voucher-footer">🎓 Success with Wisdom!</div></div>`;
       });
       html += '</body></html>';
@@ -2303,7 +2303,7 @@
       if (previousFee>0) fees += `<div class="voucher-arrears"><span>🔴 Previous Arrears</span><span>${formatCurrency(previousFee)}</span></div>`;
       fees += `<div class="voucher-row total"><span>💰 TOTAL FEE</span><span>${formatCurrency(total)}</span></div>`;
       fees += `<div class="voucher-row" style="color:var(--success);"><span>✅ Amount Paid</span><span>${formatCurrency(paid)}</span></div>`;
-      container.innerHTML = `<div class="voucher-preview"><div class="voucher-header"><h2>ABC DEMO SCHOOL</h2><div class="sub">FEE VOUCHER</div></div>
+      container.innerHTML = `<div class="voucher-preview"><div class="voucher-header"><h2>XYZ DEMO SCHOOL</h2><div class="sub">FEE VOUCHER</div></div>
         <div class="voucher-detail"><div><span class="label">ID:</span> <span class="value">${s.id}</span></div>
         <div><span class="label">Name:</span> <span class="value">${s.name}</span></div>
         <div><span class="label">Father:</span> <span class="value">${s.father}</span></div>
@@ -2311,7 +2311,7 @@
         <div><span class="label">Phone:</span> <span class="value">${s.phone||'N/A'}</span></div>
         <div><span class="label">Month:</span> <span class="value">${month} ${year}</span></div></div>
         <div class="voucher-fee">${fees}<div class="voucher-total"><span>📊 DUE BALANCE</span><span>${formatCurrency(balance)}</span></div></div>
-        <div style="background:Blue;padding:10px;border-radius:8px;margin-top:12px;font-size:18px;text-align:center;color:White;">💳 Easypesa: 0000 | 🏦ABC</div>
+        <div style="background:Blue;padding:10px;border-radius:8px;margin-top:12px;font-size:18px;text-align:center;color:White;">💳 Easypesa: 0000 | 🏦XYZ</div>
         <div class="voucher-footer">🎓 Success with Wisdom! Call for Software 03012916626</div></div>`;
     }
 
@@ -2349,12 +2349,12 @@
       const d = getMonthlyData(s.id, mk);
       let monthly=0, exam=0, other=0, previousFee=0, paid=0, balance=0, total=0;
       if (d) { monthly=d.monthly_fee||0; exam=d.exam_fee||0; other=d.other_fee||0; previousFee=d.previous_fee||0; paid=d.paid||0; balance=d.balance||0; total=monthly+exam+other+previousFee; }
-      let msg = `🏫 *ABC DEMO SCHOOL*\n🧾 *FEE VOUCHER*\n📅 ${month} ${year}\n\n👤 *${s.name}* (${s.id})\n👨 Father: ${s.father}\n📚 Class: ${s.class} (${s.section||'A'})\n\n💰 *FEE BREAKDOWN*\n────────────────────\n`;
+      let msg = `🏫 *XYZ DEMO SCHOOL*\n🧾 *FEE VOUCHER*\n📅 ${month} ${year}\n\n👤 *${s.name}* (${s.id})\n👨 Father: ${s.father}\n📚 Class: ${s.class} (${s.section||'A'})\n\n💰 *FEE BREAKDOWN*\n────────────────────\n`;
       if (monthly>0) msg += `Monthly Fee: ${formatCurrency(monthly)}\n`;
       if (exam>0) msg += `Exam Fee: ${formatCurrency(exam)}\n`;
       if (other>0) msg += `Other Fee: ${formatCurrency(other)}\n`;
       if (previousFee>0) msg += `🔴 Previous: ${formatCurrency(previousFee)}\n`;
-      msg += `────────────────────\n*Total Fee:* ${formatCurrency(total)}\n*Paid:* ${formatCurrency(paid)}\n*Due:* ${formatCurrency(balance)}\n\n💳 Easypesa: 0000\n🏦ABC\n\n🎓 *Success with Wisdom!*`;
+      msg += `────────────────────\n*Total Fee:* ${formatCurrency(total)}\n*Paid:* ${formatCurrency(paid)}\n*Due:* ${formatCurrency(balance)}\n\n💳 Easypesa: 0000\n🏦XYZ\n\n🎓 *Success with Wisdom!*`;
       let p = phone.replace(/[^0-9]/g,'');
       if (p.startsWith('0')) p = '92' + p.slice(1);
       else if (!p.startsWith('92')) p = '92' + p;
@@ -2506,7 +2506,7 @@
       else if (type === 'defaulter') title = 'Defaulter Report';
       else if (type === 'class') title = 'Class Summary';
       else if (type === 'full') title = 'Complete Statement';
-      const html = `<div style="font-family:Arial,sans-serif;padding:30px;background:#fff;"><div style="text-align:center;border-bottom:3px solid #1a237e;padding-bottom:15px;margin-bottom:25px;"><h1 style="color:#1a237e;font-size:28px;">🏫 ABC DEMO SCHHOL</h1><h2 style="color:#f39c12;font-size:20px;">${title}</h2><p style="color:#666;font-size:12px;">Generated: ${new Date().toLocaleString()}</p></div><pre style="font-family:'Courier New',monospace;font-size:12px;white-space:pre-wrap;line-height:1.5;background:#f8f9fa;padding:20px;border-radius:8px;border:1px solid #e0e0e0;">${content}</pre><div style="text-align:center;color:#888;font-size:11px;margin-top:25px;border-top:1px solid #ddd;padding-top:15px;">🎓 Success with Wisdom!</div></div>`;
+      const html = `<div style="font-family:Arial,sans-serif;padding:30px;background:#fff;"><div style="text-align:center;border-bottom:3px solid #1a237e;padding-bottom:15px;margin-bottom:25px;"><h1 style="color:#1a237e;font-size:28px;">🏫 XYZ DEMO SCHHOL</h1><h2 style="color:#f39c12;font-size:20px;">${title}</h2><p style="color:#666;font-size:12px;">Generated: ${new Date().toLocaleString()}</p></div><pre style="font-family:'Courier New',monospace;font-size:12px;white-space:pre-wrap;line-height:1.5;background:#f8f9fa;padding:20px;border-radius:8px;border:1px solid #e0e0e0;">${content}</pre><div style="text-align:center;color:#888;font-size:11px;margin-top:25px;border-top:1px solid #ddd;padding-top:15px;">🎓 Success with Wisdom!</div></div>`;
       const element = document.createElement('div');
       element.innerHTML = html;
       document.body.appendChild(element);
