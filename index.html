@@ -1135,7 +1135,7 @@
   <div class="top-bar">
     <h1>
       <span class="icon">🏫</span>
-      Elaf Lyceum Wazirpur Shigar - إيلاف
+      XYZ DEMO SCHOOL
       <small>Success With Wisdom - Fee Management System</small>
     </h1>
     <div class="top-stats">
@@ -1848,7 +1848,7 @@
           <div><span class="label">Phone:</span> <span class="value">${s.phone||'N/A'}</span></div>
           <div><span class="label">Month:</span> <span class="value">${month} ${year}</span></div></div>
           <div class="voucher-fee">${fees}<div class="voucher-total"><span>📊 DUE BALANCE</span><span>${formatCurrency(balance)}</span></div></div>
-          <div style="background:yellow;padding:10px;border-radius:8px;margin-top:12px;font-size:12px;text-align:center;">💳 Easypesa: 03215577608 | 🏦 Soneri: 20016698537</div>
+          <div style="background:yellow;padding:10px;border-radius:8px;margin-top:12px;font-size:12px;text-align:center;">💳 Easypesa: 0000 | 🏦ABC</div>
           <div class="voucher-footer">🎓 Success with Wisdom!</div></div>`;
       });
       html += '</body></html>';
@@ -2013,7 +2013,7 @@
       const s = getStudent(id);
       if (!s) return;
       let msg = '═══════════════════════════════════════\n';
-      msg += `  🏫 ELAF LYCEUM WAZIRPUR SHIGAR - ACCOUNT STATEMENT\n`;
+      msg += `  🏫 XYZ DEMO SCHOOL- ACCOUNT STATEMENT\n`;
       msg += '═══════════════════════════════════════\n\n';
       msg += `👤 ${s.name} (${s.id})\n👨 Father: ${s.father}\n📚 Class: ${s.class} (${s.section||'A'})\n📱 Phone: ${s.phone||'N/A'}\n`;
       msg += '───────────────────────────────────────\n\n';
@@ -2311,7 +2311,7 @@
         <div><span class="label">Phone:</span> <span class="value">${s.phone||'N/A'}</span></div>
         <div><span class="label">Month:</span> <span class="value">${month} ${year}</span></div></div>
         <div class="voucher-fee">${fees}<div class="voucher-total"><span>📊 DUE BALANCE</span><span>${formatCurrency(balance)}</span></div></div>
-        <div style="background:Blue;padding:10px;border-radius:8px;margin-top:12px;font-size:18px;text-align:center;color:White;">💳 Easypesa: 03215577608 | 🏦 Soneri: 20016698537</div>
+        <div style="background:Blue;padding:10px;border-radius:8px;margin-top:12px;font-size:18px;text-align:center;color:White;">💳 Easypesa: 0000 | 🏦ABC</div>
         <div class="voucher-footer">🎓 Success with Wisdom! Call for Software 03012916626</div></div>`;
     }
 
@@ -2354,7 +2354,7 @@
       if (exam>0) msg += `Exam Fee: ${formatCurrency(exam)}\n`;
       if (other>0) msg += `Other Fee: ${formatCurrency(other)}\n`;
       if (previousFee>0) msg += `🔴 Previous: ${formatCurrency(previousFee)}\n`;
-      msg += `────────────────────\n*Total Fee:* ${formatCurrency(total)}\n*Paid:* ${formatCurrency(paid)}\n*Due:* ${formatCurrency(balance)}\n\n💳 Easypesa: 03215577608\n🏦 Soneri: 20016698537\n\n🎓 *Success with Wisdom!*`;
+      msg += `────────────────────\n*Total Fee:* ${formatCurrency(total)}\n*Paid:* ${formatCurrency(paid)}\n*Due:* ${formatCurrency(balance)}\n\n💳 Easypesa: 0000\n🏦ABC\n\n🎓 *Success with Wisdom!*`;
       let p = phone.replace(/[^0-9]/g,'');
       if (p.startsWith('0')) p = '92' + p.slice(1);
       else if (!p.startsWith('92')) p = '92' + p;
@@ -2427,7 +2427,7 @@
       currentReportData = text;
     }
     function generateFullReport() {
-      let text = '════════════════════════════════════════════════════════════\n           🏫 ELAF LYCEUM WAZIRPUR SHIGAR - COMPLETE STATEMENT\n';
+      let text = '════════════════════════════════════════════════════════════\n           🏫 XYZ DEMO SCHOOL- COMPLETE STATEMENT\n';
       text += `           Generated: ${new Date().toLocaleString()}\n════════════════════════════════════════════════════════════\n\n`;
       let totalStudents = students.length, totalCollected=0, totalDue=0, totalPrevious=0;
       students.forEach(s => { if (monthlyData[s.id]) { for (const mk in monthlyData[s.id]) { const d = monthlyData[s.id][mk]; totalCollected += d.paid||0; totalDue += d.balance||0; totalPrevious += d.previous_fee||0; } } });
@@ -2443,7 +2443,7 @@
     function generateMonthlyReport() {
       const month = document.getElementById('rpMonth').value;
       const year = document.getElementById('rpYear').value;
-      let text = '════════════════════════════════════════════════════════════\n           📆 ELAF LYCEUM WAZIRPUR SHIGAR - MONTHLY REPORT\n';
+      let text = '════════════════════════════════════════════════════════════\n           📆 XYZ DEMO SCHOOL- MONTHLY REPORT\n';
       text += `           ${month} ${year}\n════════════════════════════════════════════════════════════\n\n`;
       let filtered = transactions;
       if (month !== 'All Months') filtered = filtered.filter(t => t.month === month);
@@ -2463,7 +2463,7 @@
     function generateDefaulterReport() {
       const month = document.getElementById('rpMonth').value;
       const year = document.getElementById('rpYear').value;
-      let text = '════════════════════════════════════════════════════════════\n           ⚠️ ELAF LYCEUM WAZIRPUR SHIGAR - DEFAULTER REPORT\n';
+      let text = '════════════════════════════════════════════════════════════\n           ⚠️ XYZ DEMO SCHOOL- DEFAULTER REPORT\n';
       text += `           ${month} ${year}\n════════════════════════════════════════════════════════════\n\n`;
       let defaulters = [];
       students.forEach(s => { let totalBalance=0; if (monthlyData[s.id]) { for (const mk in monthlyData[s.id]) { if (month !== 'All Months') { const [m,y] = mk.split(' '); if (m !== month || y !== year) continue; } totalBalance += monthlyData[s.id][mk].balance||0; } } if (totalBalance > 0) defaulters.push({...s, due: totalBalance}); });
@@ -2477,7 +2477,7 @@
     function generateClassReport() {
       const cls = document.getElementById('rpClass').value;
       const sec = document.getElementById('rpSection').value;
-      let text = '════════════════════════════════════════════════════════════\n           📚 ELAF LYCEUM WAZIRPUR SHIGAR - CLASS SUMMARY\n';
+      let text = '════════════════════════════════════════════════════════════\n           📚 XYZ DEMO SCHOOL- CLASS SUMMARY\n';
       text += `           ${cls} ${sec !== 'All Sections' ? '('+sec+')' : ''}\n════════════════════════════════════════════════════════════\n\n`;
       let filteredStudents = students;
       if (cls !== 'All Classes') filteredStudents = filteredStudents.filter(s => s.class === cls);
@@ -2641,7 +2641,7 @@
     // START
     // ====================================================================
     document.addEventListener('DOMContentLoaded', init);
-    console.log('🏫 Elaf Lyceum Wazirpur Shigar Premium v5.0');
+    console.log('🏫 XYZ DEMO SCHOOLPremium v5.0');
     console.log('✨ Perfect Print Styles Added!');
     console.log('📊 Loaded successfully!');
   </script>
